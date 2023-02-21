@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="tictactoe.css">
+    <title>Tic-tac-toe</title>
+</head>
+<body>
+   <section>
+    <h1>Tic-tac-toe</h1>
+    <table>
+        <tr>
+            <td onclick="test(event)" id="fst" ></td>
+            <td onclick="test(event)" id="sec"></td>
+            <td onclick="test(event)" id="trd"></td>
+        </tr>
+        <tr>
+            <td onclick="test(event)" id="forth"></td>
+            <td onclick="test(event)" id="fifth"></td>
+            <td onclick="test(event)" id="sixth"></td>
+        </tr>
+        <tr>
+            <td onclick="test(event)" id="seventh"></td>
+            <td onclick="test(event)" id="eight"></td>
+            <td onclick="test(event)" id="nineth"></td>
+        </tr>
+    </table>
+      <div class="flexPlayers">
+        <div>
+            <h3 id="player1">Player 1</h3>
+        <p id="show1"></p>
+        </div>
+        <div>
+            <h3 id="player2">Player 2</h3>
+        <p id="show2">Score</p>
+        </div>
+      </div>
+     <div class="btns">
+        <button onclick="resetGame()">Reset</button>
+        <a href="index.html"><button class="playerBtn">Change Player Names</button></a>
+     </div>
+   </section>
+
+   <script src="tictactoe.js">
+    </script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <title>Players</title>
+</head>
+<style>
+     @import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
+ body{
+    font-family: 'Bree Serif', serif;
+ }
+</style>
+<body>
+    <section>
+        <div class="col-10 col-lg-5 m-auto mt-5">
+            <h1 class="text-center">TIC TAC TOE</h1>
+            <div class="input-group-text mt-3">
+                <label for="" class="fs-4 fw-bold">First Player</label>
+                <input type="text" value="Player 1" class="form-control ms-2" id="play1">
+            </div>
+            <div class="input-group-text mt-3">
+                <label for="" class="fs-4 fw-bold">Second Player</label>
+                <input type="text" value="Player 2" class="form-control ms-2" id="play2">
+            </div>
+            <div class="text-center mt-2"><button onclick="playGame()" class="btn btn-primary col-9  fs-3">Play</button>
+            </div>
+        </div>
+    </section>
+    <script>
+        let array = []
+        const playGame = () => {
+            if (play1.value == "") {
+                alert("Invalid First Player Name")
+            } else if (play2.value == "") {
+                alert("Invalid Second Player Name")
+            } else {
+                let bothPlayers = {
+                    Player1: play1.value,
+                    Player2: play2.value
+                }
+                array.push(bothPlayers)
+                localStorage.setItem("playersNames", JSON.stringify(array))
+                window.location.href = "tictactoe.html"
+            }
+        }
+    </script>
+</body>
+
+</html>
