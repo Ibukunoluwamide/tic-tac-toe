@@ -10,35 +10,69 @@
     <title>Players</title>
 </head>
 <style>
-     @import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
- body{
-    font-family: 'Bree Serif', serif;
- }
+    @import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
+
+    body {
+        font-family: 'Bree Serif', serif;
+        background-color: #f2f2f2;
+    }
+
+    .sec {
+        margin-top: 10%;
+    }
+
+    @media only screen and (max-width: 600px) {
+        .sec {
+            margin-top: 30%;
+        }
+    }
 </style>
+
 <body>
-    <section>
-        <div class="col-10 col-lg-5 m-auto mt-5">
+    <section class="sec ">
+        <div class="col-lg-5 m-auto bg-white shadow rounded p-lg-4">
             <h1 class="text-center">TIC TAC TOE</h1>
             <div class="input-group-text mt-3">
-                <label for="" class="fs-4 fw-bold">First Player</label>
+                <label for="play1" class="fs-4 fw-bold">First Player</label>
                 <input type="text" value="Player 1" class="form-control ms-2" id="play1">
             </div>
             <div class="input-group-text mt-3">
-                <label for="" class="fs-4 fw-bold">Second Player</label>
+                <label for="play2" class="fs-4 fw-bold">Second Player</label>
                 <input type="text" value="Player 2" class="form-control ms-2" id="play2">
             </div>
-            <div class="text-center mt-2"><button onclick="playGame()" class="btn btn-primary col-9  fs-3">Play</button>
+            <div class="text-center mt-2"><button onclick="playGame()"
+                    class="btn btn-primary col-12 mb-3 fs-3">Play</button>
             </div>
         </div>
     </section>
     <script>
         let array = []
+        let playersName = JSON.parse(localStorage.getItem("playersNames"))
+        if (playersName) {
+            playersName.map((usersName) => {
+                play1.value = usersName.Player1
+                play2.value = usersName.Player2
+
+
+            })
+        }
         const playGame = () => {
             if (play1.value == "") {
-                alert("Invalid First Player Name")
-            } else if (play2.value == "") {
-                alert("Invalid Second Player Name")
-            } else {
+                Swal.fire({
+                    icon: 'error',
+                    text: 'Invalid First Player Name',
+
+                })
+
+            }
+            else if (play2.value == "") {
+                Swal.fire({
+                    icon: 'error',
+                    text: 'Invalid Second Player Name',
+
+                })
+            }
+            else {
                 let bothPlayers = {
                     Player1: play1.value,
                     Player2: play2.value
@@ -49,6 +83,7 @@
             }
         }
     </script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 </body>
 
 </html>

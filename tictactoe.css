@@ -1,84 +1,87 @@
  @import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
- body{
-    font-family: 'Bree Serif', serif;
+
+ body {
+     font-family: 'Bree Serif', serif;
  }
-table,tr,td{
-    height: 100px; 
-    width: 100px;
-    text-align: center;
-    margin: auto;
-    border: 4px solid rgb(230, 230, 230);
-    border-collapse: collapse;
-    color: white;
-    font-size: 1.5em;
-    cursor: default;
-    background-color: black;
-}
-h1{
-    color: white;
-    font-size: 2.5em;
 
-}
-h3{
-    font-size: 1.6em;
-    color: white;
-    font-weight: bolder;
-}
-p{
-    font-size: 1.3em;
-    color: white;
-    font-weight: bolder;
-}
-table{
-    width: 350px;
-    height: 350px;
-}
+ table,
+ tr,
+ td {
+     height: 100px;
+     width: 100px;
+     text-align: center;
+     margin: auto;
+     border: 4px solid rgb(230, 230, 230);
+     border-collapse: collapse;
+     color: white;
+     font-size: 1.5em;
+     cursor: default;
+     background-color: black;
+ }
 
-section{
-    
-    text-align: center;
-    min-height: 80vh;
-    width: 400px;
-    margin: auto;
+ h1 {
+     color: white;
+     font-size: 2rem;
 
-}
-body{
-    height: 100vh;
-    background-color: rgb(175, 173, 173);
-    background-image: url("https://img.freepik.com/free-vector/gradient-geometric-background_23-2148806896.jpg?size=626&ext=jpg");
-    background-repeat: no-repeat;
-    /* background-position: 100%; */
-    background-size: cover;
-}
-h1{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-.flexPlayers{
-    display: flex;
-    justify-content: center;
-    gap: 50px;
-}
-button{
-    background-color: rgb(209, 0, 0);
-    color: #fff;
-    width: 150px;
-    padding: 15px;
-    font-size: 20px;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-}
-.playerBtn{
-    background-color: rgb(12, 12, 73);
-    color: #fff;
-    width: 200px;
-    padding: 10px;
-    font-size: 18px;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-}
-.btns{
-    display: flex;
-    gap: 12px;
-}
+ }
+
+ h3 {
+     font-size: 1.6em;
+     color: white;
+     font-weight: bolder;
+ }
+
+ p {
+     font-size: 1.3em;
+     color: white;
+     font-weight: bolder;
+ }
+
+ table {
+     width: 350px;
+     height: 350px;
+ }
+
+ section {
+     text-align: center;
+     width: 400px;
+     margin: auto;
+
+ }
+
+ body {
+     background-color: rgb(175, 173, 173);
+     background-image: url("https://img.freepik.com/free-vector/gradient-geometric-background_23-2148806896.jpg?size=626&ext=jpg");
+     background-repeat: no-repeat;
+     background-size: cover;
+ }
+
+ h1 {
+     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ }
+
+ .flexPlayers {
+     display: flex;
+     justify-content: center;
+     gap: 50px;
+ }
+
+ button {
+     width: 150px;
+     padding: 15px;
+     font-size: 20px;
+ }
+
+ .playerBtn {
+     background-color: rgb(12, 12, 73);
+     color: #fff;
+     border: none;
+     width: 200px;
+ }
+
+
+ @media only screen and (max-width: 600px) {
+     body {
+         min-height: 110vh;
+     }
+ }
